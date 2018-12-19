@@ -47,7 +47,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="16C-Ca-nQg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1151.2" y="122.78860569715144"/>
+            <point key="canvasLocation" x="1814" y="123"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="y7e-zo-HdF">
@@ -64,12 +64,50 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="eIJ-80-AfK" kind="relationship" relationship="rootViewController" id="mCX-jg-76X"/>
+                        <segue destination="5aF-d7-sEz" kind="relationship" relationship="rootViewController" id="u3t-2n-Iow"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WbH-eC-Bf1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="212" y="122.78860569715144"/>
+        </scene>
+        <!--Category View Contoller-->
+        <scene sceneID="ofy-V2-b0W">
+            <objects>
+                <tableViewController id="5aF-d7-sEz" customClass="CategoryViewContoller" customModule="Todoey" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="RKP-Jp-QSX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="GSr-27-kYR">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GSr-27-kYR" id="0WR-do-hzD">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="5aF-d7-sEz" id="hiP-hG-Rbh"/>
+                            <outlet property="delegate" destination="5aF-d7-sEz" id="YuY-dH-IHF"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="jB9-E7-Cqh">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="2ku-BQ-3lN">
+                            <connections>
+                                <action selector="addButtonPressed:" destination="5aF-d7-sEz" id="z9m-1R-GnW"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="eIJ-80-AfK" kind="show" identifier="goToItems" id="xYv-6P-tNE"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PkX-61-hxZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1012" y="123"/>
         </scene>
     </scenes>
 </document>
