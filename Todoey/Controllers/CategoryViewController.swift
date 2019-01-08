@@ -110,10 +110,7 @@ class CategoryViewController: UITableViewController {
                 present(alert, animated: true, completion: nil)
     }
     
-//    @IBAction func addButtonPresse(_ sender: UIBarButtonItem) {
-//
 
-//    }
 
     
     
